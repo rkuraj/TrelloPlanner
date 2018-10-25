@@ -14,6 +14,7 @@
 		9A4711292182494B0011F446 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4711282182494B0011F446 /* Translations.swift */; };
 		9A47112C21824B300011F446 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47112B21824B300011F446 /* StringExtensions.swift */; };
 		9A47112E21824BEC0011F446 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A47112D21824BEC0011F446 /* Localizable.strings */; };
+		9A4711302182562C0011F446 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47112F2182562C0011F446 /* Logger.swift */; };
 		9AB1169A21824344009DD2A8 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1169921824344009DD2A8 /* Injector.swift */; };
 		9AB7877A218219090014CA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB78779218219090014CA0A /* AppDelegate.swift */; };
 		9AB7877C218219090014CA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7877B218219090014CA0A /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		9A4711282182494B0011F446 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		9A47112B21824B300011F446 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		9A47112D21824BEC0011F446 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9A47112F2182562C0011F446 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		9AB1169921824344009DD2A8 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		9AB78776218219090014CA0A /* TrelloPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB78779218219090014CA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4711262182481E0011F446 /* ControllerHelper.swift */,
+				9A47112F2182562C0011F446 /* Logger.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,11 +276,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TrelloPlanner/Pods-TrelloPlanner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A471124218246450011F446 /* DialogServiceProtocol.swift in Sources */,
+				9A4711302182562C0011F446 /* Logger.swift in Sources */,
 				9AB1169A21824344009DD2A8 /* Injector.swift in Sources */,
 				9A47112C21824B300011F446 /* StringExtensions.swift in Sources */,
 				9AB7879421821AC10014CA0A /* ApiServiceProtocol.swift in Sources */,

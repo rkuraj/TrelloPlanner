@@ -8,7 +8,6 @@
 
 import Foundation
 
-public class ApiService: ApiServiceProtocol
-{
+public class ApiService: ApiServiceProtocol {
     
 }
