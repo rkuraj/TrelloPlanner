@@ -8,4 +8,5 @@ target 'TrelloPlanner' do
   # Pods for TrelloPlanner
 
 	pod 'Swinject'
+	pod 'MBProgressHUD'
 end

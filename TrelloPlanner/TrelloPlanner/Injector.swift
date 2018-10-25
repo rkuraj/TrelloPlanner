@@ -18,6 +18,9 @@ class Injector {
     
     public func registerDependency() {
         container.removeAll()
+        container.register(DialogServiceProtocol.self) {
+            _ in DialogService()
+        }
     }
     
     public static func shared() -> Injector {
