@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C7851B926FDA32473F03F23 /* Pods_TrelloPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34F8802DAF53AFE40F531F2 /* Pods_TrelloPlanner.framework */; };
+		9AB1169A21824344009DD2A8 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1169921824344009DD2A8 /* Injector.swift */; };
 		9AB7877A218219090014CA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB78779218219090014CA0A /* AppDelegate.swift */; };
 		9AB7877C218219090014CA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7877B218219090014CA0A /* ViewController.swift */; };
 		9AB7877F218219090014CA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB7877D218219090014CA0A /* Main.storyboard */; };
 		9AB787812182190B0014CA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AB787802182190B0014CA0A /* Assets.xcassets */; };
 		9AB787842182190B0014CA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB787822182190B0014CA0A /* LaunchScreen.storyboard */; };
+		9AB7879421821AC10014CA0A /* ApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7879321821AC10014CA0A /* ApiServiceProtocol.swift */; };
+		9AB7879621821AFE0014CA0A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7879521821AFE0014CA0A /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9AB1169921824344009DD2A8 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		9AB78776218219090014CA0A /* TrelloPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB78779218219090014CA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AB7877B218219090014CA0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,11 @@
 		9AB787802182190B0014CA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AB787832182190B0014CA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AB787852182190B0014CA0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB7879321821AC10014CA0A /* ApiServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocol.swift; sourceTree = "<group>"; };
+		9AB7879521821AFE0014CA0A /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		B59BF2ABBDD81A4F8752079F /* Pods-TrelloPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrelloPlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrelloPlanner/Pods-TrelloPlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		D34F8802DAF53AFE40F531F2 /* Pods_TrelloPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrelloPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB0B72D53A63D9FF8B6187EE /* Pods-TrelloPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrelloPlanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrelloPlanner/Pods-TrelloPlanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7851B926FDA32473F03F23 /* Pods_TrelloPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08C09EAB9451902FDD13BB53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D34F8802DAF53AFE40F531F2 /* Pods_TrelloPlanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EF46685997C76567A908731 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B59BF2ABBDD81A4F8752079F /* Pods-TrelloPlanner.debug.xcconfig */,
+				EB0B72D53A63D9FF8B6187EE /* Pods-TrelloPlanner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9AB7876D218219090014CA0A = {
 			isa = PBXGroup;
 			children = (
 				9AB78778218219090014CA0A /* TrelloPlanner */,
 				9AB78777218219090014CA0A /* Products */,
+				8EF46685997C76567A908731 /* Pods */,
+				08C09EAB9451902FDD13BB53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +93,7 @@
 				9AB7878B218219480014CA0A /* Models */,
 				9AB78779218219090014CA0A /* AppDelegate.swift */,
 				9AB787852182190B0014CA0A /* Info.plist */,
+				9AB1169921824344009DD2A8 /* Injector.swift */,
 			);
 			path = TrelloPlanner;
 			sourceTree = "<group>";
@@ -102,6 +133,8 @@
 		9AB7878F218219EF0014CA0A /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				9AB7879321821AC10014CA0A /* ApiServiceProtocol.swift */,
+				9AB7879521821AFE0014CA0A /* ApiService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -127,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AB787882182190B0014CA0A /* Build configuration list for PBXNativeTarget "TrelloPlanner" */;
 			buildPhases = (
+				92147D86BAC13EB255C3B031 /* [CP] Check Pods Manifest.lock */,
 				9AB78772218219090014CA0A /* Sources */,
 				9AB78773218219090014CA0A /* Frameworks */,
 				9AB78774218219090014CA0A /* Resources */,
+				34D54AAFEFFC2CAB194119E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,12 +221,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34D54AAFEFFC2CAB194119E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TrelloPlanner/Pods-TrelloPlanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrelloPlanner/Pods-TrelloPlanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92147D86BAC13EB255C3B031 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrelloPlanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9AB78772218219090014CA0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB1169A21824344009DD2A8 /* Injector.swift in Sources */,
+				9AB7879421821AC10014CA0A /* ApiServiceProtocol.swift in Sources */,
 				9AB7877C218219090014CA0A /* ViewController.swift in Sources */,
+				9AB7879621821AFE0014CA0A /* ApiService.swift in Sources */,
 				9AB7877A218219090014CA0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +411,7 @@
 		};
 		9AB787892182190B0014CA0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B59BF2ABBDD81A4F8752079F /* Pods-TrelloPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +430,7 @@
 		};
 		9AB7878A2182190B0014CA0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB0B72D53A63D9FF8B6187EE /* Pods-TrelloPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
