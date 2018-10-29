@@ -9,5 +9,5 @@ target 'TrelloPlanner' do
 
 	pod 'Swinject'
 	pod 'MBProgressHUD'
-	pod 'SwiftyBeaver'
+	pod 'Alamofire'
 end

@@ -7,23 +7,6 @@
 //
 
 import Foundation
-import SwiftyBeaver
 
 class Logger {
-    private let logger = SwiftyBeaver.self
-    private let console = ConsoleDestination()
-    
-    public func Log(message: String) {
-        #if DEBUG
-        logger.addDestination(console)
-        logger.verbose(message)
-        #endif
-    }
-    
-    public func Error(message: String) {
-        #if DEBUG
-        logger.addDestination(console)
-        logger.error(message)
-        #endif
-    }
 }

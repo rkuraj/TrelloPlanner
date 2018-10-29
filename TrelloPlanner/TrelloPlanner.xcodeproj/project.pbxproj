@@ -15,6 +15,7 @@
 		9A47112C21824B300011F446 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47112B21824B300011F446 /* StringExtensions.swift */; };
 		9A47112E21824BEC0011F446 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A47112D21824BEC0011F446 /* Localizable.strings */; };
 		9A4711302182562C0011F446 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47112F2182562C0011F446 /* Logger.swift */; };
+		9A47113221825DE60011F446 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47113121825DE60011F446 /* Endpoints.swift */; };
 		9AB1169A21824344009DD2A8 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1169921824344009DD2A8 /* Injector.swift */; };
 		9AB7877A218219090014CA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB78779218219090014CA0A /* AppDelegate.swift */; };
 		9AB7877C218219090014CA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7877B218219090014CA0A /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		9A47112B21824B300011F446 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		9A47112D21824BEC0011F446 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9A47112F2182562C0011F446 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		9A47113121825DE60011F446 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		9AB1169921824344009DD2A8 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		9AB78776218219090014CA0A /* TrelloPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB78779218219090014CA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +127,7 @@
 				9A47112A21824B150011F446 /* Extensions */,
 				9AB7879221821A3A0014CA0A /* Constansts */,
 				9AB7879121821A280014CA0A /* Helpers */,
-				9AB7878F218219EF0014CA0A /* Api */,
+				9AB7878F218219EF0014CA0A /* API */,
 				9AB7878E2182196E0014CA0A /* Services */,
 				9AB7878D218219620014CA0A /* Views */,
 				9AB7878C218219550014CA0A /* ViewModels */,
@@ -171,13 +173,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		9AB7878F218219EF0014CA0A /* Api */ = {
+		9AB7878F218219EF0014CA0A /* API */ = {
 			isa = PBXGroup;
 			children = (
 				9AB7879321821AC10014CA0A /* ApiServiceProtocol.swift */,
 				9AB7879521821AFE0014CA0A /* ApiService.swift */,
+				9A47113121825DE60011F446 /* Endpoints.swift */,
 			);
-			path = Api;
+			path = API;
 			sourceTree = "<group>";
 		};
 		9AB7879121821A280014CA0A /* Helpers */ = {
@@ -275,14 +278,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TrelloPlanner/Pods-TrelloPlanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +328,7 @@
 				9A4711272182481E0011F446 /* ControllerHelper.swift in Sources */,
 				9AB7877A218219090014CA0A /* AppDelegate.swift in Sources */,
 				9A4711292182494B0011F446 /* Translations.swift in Sources */,
+				9A47113221825DE60011F446 /* Endpoints.swift in Sources */,
 				9A4711212182460D0011F446 /* DialogService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
