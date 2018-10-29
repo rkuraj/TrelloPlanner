@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol DialogServiceProtocol {
-    
+    func showProgressHud()
+    func hideProgressHud()
+    func showAlert(title: String, message: String)
+    func showAlert(title: String, message: String, completion: ((UIAlertAction) -> Swift.Void)?)
 }

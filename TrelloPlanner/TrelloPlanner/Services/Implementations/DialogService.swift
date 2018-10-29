@@ -13,7 +13,7 @@ import UIKit
 public class DialogService: DialogServiceProtocol {
     private var progressHUD: MBProgressHUD?
     
-    public func ShowProgressHud() {
+    public func showProgressHud() {
         guard let topViewController = ControllerHelper.topViewController() else {
             return
         }
@@ -23,11 +23,11 @@ public class DialogService: DialogServiceProtocol {
         self.progressHUD?.label.text = Translations.ProgressDialogTitle
     }
     
-    public func HideProgressHud() {
+    public func hideProgressHud() {
         self.progressHUD?.hide(animated: true)
     }
     
-    public func ShowAlert(title: String, message: String) {
+    public func showAlert(title: String, message: String) {
         guard let topViewController = ControllerHelper.topViewController() else {
             return
         }
@@ -37,7 +37,7 @@ public class DialogService: DialogServiceProtocol {
         topViewController.present(alert, animated: true, completion: nil)
     }
     
-    public func ShowAlert(title: String, message: String, completion: ((UIAlertAction) -> Swift.Void)? = nil) {
+    public func showAlert(title: String, message: String, completion: ((UIAlertAction) -> Swift.Void)? = nil) {
         guard let topViewController = ControllerHelper.topViewController() else {
             return
         }

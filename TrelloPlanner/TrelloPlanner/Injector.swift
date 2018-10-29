@@ -30,4 +30,6 @@ class Injector {
     private static var instance: Injector = {
         return Injector()
     }()
+    
+    private init() {}
 }
