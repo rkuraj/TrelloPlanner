@@ -10,18 +10,50 @@ import Foundation
 import RxSwift
 
 class MainViewModel {
-    
     //MARK: Properties
     let result = Variable<String>("")
     
     private var dialogService: DialogServiceProtocol
+    private var boardRepository: BoardRepositoryProtocol
+    private var memberRepository: MemberRepositoryProtocol
     
-    required init() {
-        self.dialogService = Injector.shared().resolve(DialogServiceProtocol.self)!
+    required init(_ dialogService: DialogServiceProtocol, _ boardRepository: BoardRepositoryProtocol, _ memberRepository: MemberRepositoryProtocol) {
+        self.dialogService = dialogService
+        self.boardRepository = boardRepository
+        self.memberRepository = memberRepository
     }
     
     public func fetchData() {
-        result.value = "fetched"
-        self.dialogService.showAlert(title: "elo", message: "elo")
+        
+        _ = self.memberRepository.getMember().subscribe { event in
+            if let error = event.error {
+                Logger.Log(error.localizedDescription)
+                return
+            }
+            
+            guard let member = event.element else {
+                return
+            }
+            
+            guard let email = member.email else {
+                return
+            }
+            
+            self.result.value = email
+        }
+//        _ = self.boardRepository.getBoards().subscribe { event in
+//            if let error = event.error {
+//                Logger.Log(error.localizedDescription)
+//            }
+//            guard let boards = event.element else {
+//                return
+//            }
+//
+//            guard let name = boards.items.first?.name else {
+//                return
+//            }
+//
+//            self.result.value = name
+//        }
     }
 }

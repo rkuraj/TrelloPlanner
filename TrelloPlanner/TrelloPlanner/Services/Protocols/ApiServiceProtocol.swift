@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
-public protocol ApiServiceProtocol
-{
-    
+public protocol ApiServiceProtocol {
+    func getBoards() -> Observable<Data>
+    func getMember() -> Observable<Data>
 }

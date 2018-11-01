@@ -9,4 +9,9 @@
 import Foundation
 
 class Logger {
+    static func Log(_ message: String) {
+        #if DEBUG
+        print(message)
+        #endif
+    }
 }

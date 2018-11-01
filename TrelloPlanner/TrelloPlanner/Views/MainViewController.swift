@@ -28,13 +28,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.viewModel = MainViewModel()
         self.disposeBag = DisposeBag()
         
+        createViewModel()
         createBindingSet()
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,5 +44,15 @@ class MainViewController: UIViewController {
         .map{ $0}
         .bind(to: resultLabel.rx.text)
             .disposed(by: self.disposeBag)
+    }
+}
+
+extension MainViewController {
+    func createViewModel() {
+        let dialogService = Injector.shared().resolve(DialogServiceProtocol.self)!
+        let boardRepository = Injector.shared().resolve(BoardRepositoryProtocol.self)!
+        let memberRepository = Injector.shared().resolve(MemberRepositoryProtocol.self)!
+        
+        self.viewModel = MainViewModel(dialogService, boardRepository, memberRepository)
     }
 }

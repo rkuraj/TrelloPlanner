@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3C7851B926FDA32473F03F23 /* Pods_TrelloPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34F8802DAF53AFE40F531F2 /* Pods_TrelloPlanner.framework */; };
+		9A0DE0452187B4BD004A6830 /* BoardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE0442187B4BD004A6830 /* BoardRepository.swift */; };
+		9A0DE0472187B4CF004A6830 /* BoardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE0462187B4CF004A6830 /* BoardRepositoryProtocol.swift */; };
+		9A0DE0492188CC41004A6830 /* BoardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE0482188CC41004A6830 /* BoardsModel.swift */; };
+		9A4457D8218A471300393D50 /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457D7218A471300393D50 /* MemberModel.swift */; };
+		9A4457DA218A4B7E00393D50 /* MemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457D9218A4B7E00393D50 /* MemberRepository.swift */; };
+		9A4457DC218A4BA100393D50 /* MemberRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457DB218A4BA100393D50 /* MemberRepositoryProtocol.swift */; };
 		9A4711212182460D0011F446 /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4711202182460D0011F446 /* DialogService.swift */; };
 		9A471124218246450011F446 /* DialogServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A471123218246450011F446 /* DialogServiceProtocol.swift */; };
 		9A4711272182481E0011F446 /* ControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4711262182481E0011F446 /* ControllerHelper.swift */; };
@@ -29,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A0DE0442187B4BD004A6830 /* BoardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRepository.swift; sourceTree = "<group>"; };
+		9A0DE0462187B4CF004A6830 /* BoardRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRepositoryProtocol.swift; sourceTree = "<group>"; };
+		9A0DE0482188CC41004A6830 /* BoardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsModel.swift; sourceTree = "<group>"; };
+		9A4457D7218A471300393D50 /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
+		9A4457D9218A4B7E00393D50 /* MemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepository.swift; sourceTree = "<group>"; };
+		9A4457DB218A4BA100393D50 /* MemberRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepositoryProtocol.swift; sourceTree = "<group>"; };
 		9A4711202182460D0011F446 /* DialogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogService.swift; sourceTree = "<group>"; };
 		9A471123218246450011F446 /* DialogServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogServiceProtocol.swift; sourceTree = "<group>"; };
 		9A4711262182481E0011F446 /* ControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerHelper.swift; sourceTree = "<group>"; };
@@ -86,6 +98,7 @@
 		9A471122218246330011F446 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9AB7879321821AC10014CA0A /* ApiServiceProtocol.swift */,
 				9A471123218246450011F446 /* DialogServiceProtocol.swift */,
 			);
 			path = Protocols;
@@ -94,6 +107,7 @@
 		9A4711252182465F0011F446 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				9AB7879521821AFE0014CA0A /* ApiService.swift */,
 				9A4711202182460D0011F446 /* DialogService.swift */,
 			);
 			path = Implementations;
@@ -110,6 +124,10 @@
 		9A47113321876C650011F446 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				9A0DE0442187B4BD004A6830 /* BoardRepository.swift */,
+				9A0DE0462187B4CF004A6830 /* BoardRepositoryProtocol.swift */,
+				9A4457D9218A4B7E00393D50 /* MemberRepository.swift */,
+				9A4457DB218A4BA100393D50 /* MemberRepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -155,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				9A47113421876CC30011F446 /* BoardModel.swift */,
+				9A0DE0482188CC41004A6830 /* BoardsModel.swift */,
+				9A4457D7218A471300393D50 /* MemberModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,8 +210,6 @@
 		9AB7878F218219EF0014CA0A /* API */ = {
 			isa = PBXGroup;
 			children = (
-				9AB7879321821AC10014CA0A /* ApiServiceProtocol.swift */,
-				9AB7879521821AFE0014CA0A /* ApiService.swift */,
 				9A47113121825DE60011F446 /* Endpoints.swift */,
 			);
 			path = API;
@@ -294,6 +312,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TrelloPlanner/Pods-TrelloPlanner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
@@ -302,6 +321,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
@@ -338,18 +358,24 @@
 			files = (
 				9A471124218246450011F446 /* DialogServiceProtocol.swift in Sources */,
 				9A4711302182562C0011F446 /* Logger.swift in Sources */,
+				9A0DE0472187B4CF004A6830 /* BoardRepositoryProtocol.swift in Sources */,
 				9AB1169A21824344009DD2A8 /* Injector.swift in Sources */,
 				9A47112C21824B300011F446 /* StringExtensions.swift in Sources */,
 				9AB7879421821AC10014CA0A /* ApiServiceProtocol.swift in Sources */,
+				9A4457DA218A4B7E00393D50 /* MemberRepository.swift in Sources */,
 				9AB7877C218219090014CA0A /* MainViewController.swift in Sources */,
 				9AB7879621821AFE0014CA0A /* ApiService.swift in Sources */,
 				9A4711372187739B0011F446 /* MainViewModel.swift in Sources */,
 				9A4711272182481E0011F446 /* ControllerHelper.swift in Sources */,
 				9AB7877A218219090014CA0A /* AppDelegate.swift in Sources */,
 				9A4711292182494B0011F446 /* Translations.swift in Sources */,
+				9A0DE0492188CC41004A6830 /* BoardsModel.swift in Sources */,
+				9A4457D8218A471300393D50 /* MemberModel.swift in Sources */,
 				9A47113221825DE60011F446 /* Endpoints.swift in Sources */,
+				9A0DE0452187B4BD004A6830 /* BoardRepository.swift in Sources */,
 				9A47113521876CC30011F446 /* BoardModel.swift in Sources */,
 				9A4711212182460D0011F446 /* DialogService.swift in Sources */,
+				9A4457DC218A4BA100393D50 /* MemberRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

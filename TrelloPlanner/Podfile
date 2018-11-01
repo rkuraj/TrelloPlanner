@@ -12,4 +12,5 @@ target 'TrelloPlanner' do
 	pod 'Alamofire'
 	pod 'RxSwift'
 	pod 'RxCocoa'
+	pod 'RxAlamofire'
 end

@@ -21,6 +21,19 @@ class Injector {
         container.register(DialogServiceProtocol.self) {
             _ in DialogService()
         }
+        container.register(ApiServiceProtocol.self) {
+            _ in ApiService()
+        }
+        
+        let apiService: ApiServiceProtocol = Injector.shared().resolve(ApiServiceProtocol.self)!
+        
+        container.register(BoardRepositoryProtocol.self) {
+            _ in BoardRepository(apiService: apiService)
+        }
+        
+        container.register(MemberRepositoryProtocol.self) {
+            _ in MemberRepository(apiService: apiService)
+        }
     }
     
     public static func shared() -> Injector {

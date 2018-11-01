@@ -1,13 +1,13 @@
 //
-//  ApiService.swift
+//  BoardsModel.swift
 //  TrelloPlanner
 //
-//  Created by Robert Kuraj on 25/10/2018.
+//  Created by Robert Kuraj on 30/10/2018.
 //  Copyright © 2018 Robert Kuraj. All rights reserved.
 //
 
 import Foundation
 
-public class ApiService: ApiServiceProtocol {
+public class BoardsModel: Codable {
     
 }
