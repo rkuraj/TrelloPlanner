@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qg8-Ck-FS7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +48,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-297" y="136"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="YYV-Ra-Mk6">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="Qg8-Ck-FS7" customClass="ProfileViewController" customModule="TrelloPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cuP-ri-gKN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fRT-Qe-R3o">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="MVm-yC-pRs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ojk-iM-A9Y">
+                                            <rect key="frame" x="142.5" y="80" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="3WU-Me-NVA"/>
+                                                <constraint firstAttribute="height" constant="90" id="Kxf-ei-q1Q"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ojk-iM-A9Y" firstAttribute="centerY" secondItem="MVm-yC-pRs" secondAttribute="centerY" id="Gyo-Ug-Ckw"/>
+                                        <constraint firstItem="ojk-iM-A9Y" firstAttribute="centerX" secondItem="MVm-yC-pRs" secondAttribute="centerX" id="nIs-YO-Nqk"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pki-EK-Z04" firstAttribute="trailing" secondItem="fRT-Qe-R3o" secondAttribute="trailing" id="4Lc-Aj-1Tr"/>
+                            <constraint firstItem="fRT-Qe-R3o" firstAttribute="top" secondItem="cuP-ri-gKN" secondAttribute="top" id="gvK-N9-wt0"/>
+                            <constraint firstItem="Pki-EK-Z04" firstAttribute="bottom" secondItem="fRT-Qe-R3o" secondAttribute="bottom" id="srs-2y-Sne"/>
+                            <constraint firstItem="fRT-Qe-R3o" firstAttribute="leading" secondItem="Pki-EK-Z04" secondAttribute="leading" id="wnY-ik-ZLp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pki-EK-Z04"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="ojk-iM-A9Y" id="JC3-vE-VxA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9i-b6-LMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461.60000000000002" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>

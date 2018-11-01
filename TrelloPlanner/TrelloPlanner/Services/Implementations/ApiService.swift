@@ -21,4 +21,8 @@ public class ApiService: ApiServiceProtocol {
     public func getMember() -> Observable<Data> {
         return sessionManager.rx.data(.get, Endpoints.member.path(), parameters: nil, encoding: URLEncoding.default, headers: nil)
     }
+    
+    public func getAvatar(_ url:String) -> Observable<Data> {
+        return sessionManager.rx.data(.connect, url)
+    }
 }

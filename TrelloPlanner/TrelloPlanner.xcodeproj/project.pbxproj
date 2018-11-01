@@ -14,6 +14,10 @@
 		9A4457D8218A471300393D50 /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457D7218A471300393D50 /* MemberModel.swift */; };
 		9A4457DA218A4B7E00393D50 /* MemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457D9218A4B7E00393D50 /* MemberRepository.swift */; };
 		9A4457DC218A4BA100393D50 /* MemberRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457DB218A4BA100393D50 /* MemberRepositoryProtocol.swift */; };
+		9A4457DE218B387600393D50 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457DD218B387600393D50 /* ProfileViewController.swift */; };
+		9A4457E0218B3B2E00393D50 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457DF218B3B2E00393D50 /* ProfileViewModel.swift */; };
+		9A4457EA218B419B00393D50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457E9218B419B00393D50 /* ViewController.swift */; };
+		9A4457EC218B436000393D50 /* BindingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4457EB218B436000393D50 /* BindingHelpers.swift */; };
 		9A4711212182460D0011F446 /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4711202182460D0011F446 /* DialogService.swift */; };
 		9A471124218246450011F446 /* DialogServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A471123218246450011F446 /* DialogServiceProtocol.swift */; };
 		9A4711272182481E0011F446 /* ControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4711262182481E0011F446 /* ControllerHelper.swift */; };
@@ -41,6 +45,10 @@
 		9A4457D7218A471300393D50 /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
 		9A4457D9218A4B7E00393D50 /* MemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepository.swift; sourceTree = "<group>"; };
 		9A4457DB218A4BA100393D50 /* MemberRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepositoryProtocol.swift; sourceTree = "<group>"; };
+		9A4457DD218B387600393D50 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9A4457DF218B3B2E00393D50 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		9A4457E9218B419B00393D50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A4457EB218B436000393D50 /* BindingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingHelpers.swift; sourceTree = "<group>"; };
 		9A4711202182460D0011F446 /* DialogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogService.swift; sourceTree = "<group>"; };
 		9A471123218246450011F446 /* DialogServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogServiceProtocol.swift; sourceTree = "<group>"; };
 		9A4711262182481E0011F446 /* ControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerHelper.swift; sourceTree = "<group>"; };
@@ -183,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4711362187739B0011F446 /* MainViewModel.swift */,
+				9A4457DF218B3B2E00393D50 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -194,6 +203,8 @@
 				9AB7877B218219090014CA0A /* MainViewController.swift */,
 				9AB787802182190B0014CA0A /* Assets.xcassets */,
 				9AB787822182190B0014CA0A /* LaunchScreen.storyboard */,
+				9A4457DD218B387600393D50 /* ProfileViewController.swift */,
+				9A4457E9218B419B00393D50 /* ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +231,7 @@
 			children = (
 				9A4711262182481E0011F446 /* ControllerHelper.swift */,
 				9A47112F2182562C0011F446 /* Logger.swift */,
+				9A4457EB218B436000393D50 /* BindingHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -363,17 +375,21 @@
 				9A47112C21824B300011F446 /* StringExtensions.swift in Sources */,
 				9AB7879421821AC10014CA0A /* ApiServiceProtocol.swift in Sources */,
 				9A4457DA218A4B7E00393D50 /* MemberRepository.swift in Sources */,
+				9A4457EA218B419B00393D50 /* ViewController.swift in Sources */,
 				9AB7877C218219090014CA0A /* MainViewController.swift in Sources */,
 				9AB7879621821AFE0014CA0A /* ApiService.swift in Sources */,
 				9A4711372187739B0011F446 /* MainViewModel.swift in Sources */,
 				9A4711272182481E0011F446 /* ControllerHelper.swift in Sources */,
 				9AB7877A218219090014CA0A /* AppDelegate.swift in Sources */,
+				9A4457EC218B436000393D50 /* BindingHelpers.swift in Sources */,
 				9A4711292182494B0011F446 /* Translations.swift in Sources */,
 				9A0DE0492188CC41004A6830 /* BoardsModel.swift in Sources */,
 				9A4457D8218A471300393D50 /* MemberModel.swift in Sources */,
 				9A47113221825DE60011F446 /* Endpoints.swift in Sources */,
 				9A0DE0452187B4BD004A6830 /* BoardRepository.swift in Sources */,
 				9A47113521876CC30011F446 /* BoardModel.swift in Sources */,
+				9A4457E0218B3B2E00393D50 /* ProfileViewModel.swift in Sources */,
+				9A4457DE218B387600393D50 /* ProfileViewController.swift in Sources */,
 				9A4711212182460D0011F446 /* DialogService.swift in Sources */,
 				9A4457DC218A4BA100393D50 /* MemberRepositoryProtocol.swift in Sources */,
 			);

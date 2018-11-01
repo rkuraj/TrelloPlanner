@@ -8,7 +8,9 @@
 
 import Foundation
 import RxSwift
+import UIKit
 
 public protocol MemberRepositoryProtocol {
     func getMember() -> Observable<MemberModel>
+    func getAvatar(from url: String?) -> Observable<UIImage>
 }

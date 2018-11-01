@@ -12,4 +12,5 @@ import RxSwift
 public protocol ApiServiceProtocol {
     func getBoards() -> Observable<Data>
     func getMember() -> Observable<Data>
+    func getAvatar() -> Observable<Data>
 }
