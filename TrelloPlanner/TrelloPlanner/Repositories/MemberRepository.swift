@@ -29,17 +29,33 @@ public class MemberRepository: MemberRepositoryProtocol {
         }
     }
     
-    public func getAvatar(from url: String?) -> Observable<UIImage> {
+    public func getAvatar(from urlString: String?) -> Observable<UIImage> {
+        var image: UIImage?
+        let formattedUrl = urlString! + "/170.png"
+        let url = URL.init(string: formattedUrl)
         
-//        return Observable.create
-//        getData(from: url) { data, response, error in
-//            guard let data = data, error == nil else { return }
-//            print(response?.suggestedFilename ?? url.lastPathComponent)
-//            print("Download Finished")
-//            DispatchQueue.main.async() {
-//                self.imageView.image = UIImage(data: data)
-//            }
-//        }
+        return Observable.create { subscriber in
+            self.getData(from: url!) { data, response, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    subscriber.onError(error)
+                    return
+                }
+                
+                guard let data = data else {
+                    return
+                }
+                
+                image = UIImage(data: data)
+                
+                subscriber.onNext(image!)
+                subscriber.onCompleted()
+            }
+
+            return Disposables.create()
+        }
+
+
     }
     
     private func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {

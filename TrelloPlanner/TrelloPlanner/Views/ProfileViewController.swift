@@ -17,6 +17,9 @@ class ProfileViewController: ViewController {
     @IBOutlet weak var avatarImageView: UIImageView!
     
     //MARK: Actions
+    @IBAction func fetchAvatar(_ sender: UIButton) {
+        self.viewModel?.fetchData()
+    }
     
     //MARK: Overrides
     override func createViewModel() {

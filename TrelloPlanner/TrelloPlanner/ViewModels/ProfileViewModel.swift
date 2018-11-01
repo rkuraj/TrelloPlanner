@@ -37,6 +37,17 @@ class ProfileViewModel {
     }
     
     private func setAvatarImage(from ulr: String?) {
-        self.memberRepository.
+        self.memberRepository.getAvatar(from: ulr).subscribe { event in
+            if let error = event.error {
+                Logger.Log(error.localizedDescription)
+                return
+            }
+            
+            guard let image = event.element else {
+                return
+            }
+            
+            self.avatarImage.value = image
+        }
     }
 }
